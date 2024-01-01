@@ -1,0 +1,168 @@
+*breeze* A dark charcoal theme for classic Vim & modern Neovim.
+
+OPTIONS                                                       *breeze-options*
+
+Default option values:
+>
+  let g:breezeCursorColor = v:false
+  let g:breezeItalics = v:true
+  let g:breezeNormalFloat = v:false
+  let g:breezeTerminalColors = v:true
+  let g:breezeTransparent = v:false
+  let g:breezeUndercurls = v:true
+  let g:breezeUnderlineMatchParen = v:false
+  let g:breezeWinSeparator = 1
+<
+------------------------------------------------------------------------------
+breezeCursorColor~                                     *g:moonflyCursorColor*
+
+The `breezeCursorColor` option specifies whether to color the cursor or not.
+By default the cursor will NOT be colored. If you prefer a colored cursor then
+add the following to your initialization file:
+
+>
+  " Vimscript initialization file
+  let g:breezeCursorColor = v:true
+
+  -- Lua initialization file
+  vim.g.breezeCursorColor = true
+<
+------------------------------------------------------------------------------
+breezeItalics~                                             *g:moonflyItalics*
+
+The `breezeItalics` option specifies whether to use italics for comments and
+certain HTML elements in GUI versions of Vim. By default this option is
+enabled. If you do not like the appearance of italics then add the following
+to your initialization file:
+
+>
+  " Vimscript initialization file
+  let g:breezeItalics = v:false
+
+  -- Lua initialization file
+  vim.g.breezeItalics = false
+<
+------------------------------------------------------------------------------
+breezeNormalFloat~                                     *g:moonflyNormalFloat*
+
+The `breezeNormalFloat` option specifies whether to use moonfly background
+and foreground colors in Neovim floating windows. By default this option is
+disabled, hence, Neovim floating windows will usually be styled with popup
+menu colors. If you would like to use breeze colors instead then add the
+following to your configuration:
+
+>
+  " Vimscript initialization file
+  let g:breezeNormalFloat = v:true
+
+  -- Lua initialization file
+  vim.g.breezeNormalFloat = true
+<
+------------------------------------------------------------------------------
+breezeTerminalColors~                               *g:moonflyTerminalColors*
+
+The `breezeTerminalColors` option specifies whether to use the moonfly color
+palette in `:terminal` windows when `termguicolors` is set. By default this
+option is enabled. If you prefer not to use the breeze color palette for the
+first 16 terminal colors then add the following to your initialization file:
+
+>
+  " Vimscript initialization file
+  let g:breezeTerminalColors = v:false
+
+  -- Lua initialization file
+  vim.g.breezeTerminalColors = false
+<
+------------------------------------------------------------------------------
+breezeTransparent~                                     *g:moonflyTransparent*
+
+The `breezeTransparent` option specifies whether to use an opaque or
+transparent background in GUI versions of Vim. By default this option is
+disabled. If you would like a transparent background then add the following to
+your initialization file:
+
+>
+  " Vimscript initialization file
+  let g:breezeTransparent = v:true
+
+  -- Lua initialization file
+  vim.g.breezeTransparent = true
+<
+------------------------------------------------------------------------------
+breezeUndercurls~                                       *g:moonflyUndercurls*
+
+The `breezeUndercurls` option specifies whether to use undercurls for
+spelling and linting errors in GUI versions of Vim, including terminal Vim
+with `termguicolors` set. By default this option is enabled. If you do not
+like the appearance of undercurls then add the following to your
+initialization file:
+
+>
+  " Vimscript initialization file
+  let g:breezeUndercurls = v:false
+
+  -- Lua initialization file
+  vim.g.breezeUndercurls = false
+<
+------------------------------------------------------------------------------
+breezeUnderlineMatchParen~                     *g:moonflyUnderlineMatchParen*
+
+The `breezeUnderlineMatchParen` option specifies whether to underline
+matching parentheses. By default this option is disabled. If you want to
+underline matching parentheses then add the following to your initialization
+file:
+
+>
+  " Vimscript initialization file
+  let g:breezeUnderlineMatchParen = v:true
+
+  -- Lua initialization file
+  vim.g.breezeUnderlineMatchParen = true
+<
+------------------------------------------------------------------------------
+breezeVirtualTextColor~                           *g:moonflyVirtualTextColor*
+
+The `breezeVirtualTextColor` option specifies whether to display diagnostic
+virtual text in color. By default this option is **disabled**. If you want to
+display diagnostic virtual text in color then add the following to your
+initialization file:
+
+>
+  " Vimscript initialization file
+  let g:breezeVirtualTextColor = v:true
+
+  -- Lua initialization file
+  vim.g.breezeVirtualTextColor = true
+<
+------------------------------------------------------------------------------
+breezeWinSeparator~                                   *g:moonflyWinSeparator*
+
+The `breezeWinSeparator` option specifies the style of window separators:
+
+- `0` will display no window separators
+
+- `1` will display block separators; this is the default
+
+- `2` will diplay line separators
+
+For example, if line separators are desired then add the following to your
+configuration:
+
+>
+  " Vimscript initialization file
+  let g:breezeWinSeparator = 2
+
+  -- Lua initialization file
+  vim.g.breezeWinSeparator = 2
+------------------------------------------------------------------------------
+breezePalette~                                              *moonfly.palette*
+
+The `palette` field returns a table of internal theme colors; useful for
+constructing custom statuslines and the like. Note, this is only available in
+Neovim.
+
+>lua
+  require("breeze").palette
+<
+
+vim:tw=78:ts=8:noet:ft=help:norl:
